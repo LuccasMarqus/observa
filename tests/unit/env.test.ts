@@ -42,6 +42,33 @@ describe("parseServerEnv", () => {
     expect(parseServerEnv({ DATABASE_URL: url }).DATABASE_URL).toBe(url);
   });
 
+  it.each([
+    ["quebra de linha no fim", "\n"],
+    ["espaço no fim", " "],
+    ["CRLF do Windows", "\r\n"],
+  ])("ignora %s (comum ao colar o segredo no GitHub)", (_caso, sufixo) => {
+    const url = "postgresql://u:p@aws-0-sa-east-1.pooler.supabase.com:5432/postgres?sslmode=require";
+
+    expect(parseServerEnv({ DATABASE_URL: `${url}${sufixo}` }).DATABASE_URL).toBe(url);
+  });
+
+  it("ignora aspas em volta da URL", () => {
+    const url = "postgresql://u:p@db.abc.supabase.co:5432/postgres?sslmode=require";
+
+    expect(parseServerEnv({ DATABASE_URL: `"${url}"` }).DATABASE_URL).toBe(url);
+  });
+
+  it("explica quando a URL é ilegível, sem mostrar o valor", () => {
+    const comCaractereEspecial = "postgresql://u:se#nha@db.abc.supabase.co:5432/postgres?sslmode=require";
+
+    expect(() => parseServerEnv({ DATABASE_URL: comCaractereEspecial })).toThrow(
+      expect.objectContaining({ message: expect.stringMatching(/sslmode=require[\s\S]*caractere especial/) }),
+    );
+    expect(() => parseServerEnv({ DATABASE_URL: comCaractereEspecial })).toThrow(
+      expect.objectContaining({ message: expect.not.stringContaining("se#nha") }),
+    );
+  });
+
   it.each(["localhost", "127.0.0.1"])("dispensa TLS no banco local (%s)", (host) => {
     const url = `postgres://u:p@${host}:54329/observa`;
 
