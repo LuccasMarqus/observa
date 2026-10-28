@@ -1,0 +1,63 @@
+{
+  "contract": "docs/design/direcao-visual.md — superfície: página de apresentação (/); trabalho: entender que dá para ver como o deputado vota, gasta e propõe, com fonte; ação principal: 'Encontrar deputados' (/deputados); hierarquia: h1 promessa > ação > ficha de exemplo > o que se acompanha > princípios",
+  "targetViewports": [
+    "390x844",
+    "1440x900"
+  ],
+  "accessibility": {
+    "status": "pass",
+    "evidence": "Build de produção no navegador: um único h1 e h2/h3 em ordem; 0 links sem nome; 0 imagens sem alt; lang pt-BR; Tab real foca 'Pular para o conteúdo' visível com anel de foco; contraste WCAG calculado para os 14 pares de cor (mínimo 5,83:1 no escuro, 6,24:1 no claro); marca corrigida para 44 px de altura; E2E verifica foco do pular, alvos ≥ 44 px fora de texto corrido; prefers-reduced-motion zera transições. Refinamento moderno-clássico: novos pares calculados — papel a 80% sobre tinta 10,47:1 (claro) e 8,72:1 (escuro), rubrica a 70% 8,27:1 / 6,25:1, botão em hover 10,54:1 / 9,43:1; itálico do h1 fica dentro do mesmo heading (nome acessível inalterado); âncoras com scroll-margin para o cabeçalho fixo."
+  },
+  "responsive": {
+    "status": "pass",
+    "evidence": "390x844: promessa e ação principal visíveis sem rolar, ficha empilhada abaixo, selos quebram linha sem estourar; 1440x900: duas colunas com a ficha ao lado e a próxima seção aparecendo; E2E confirma ausência de rolagem horizontal em desktop e Pixel 7. Após o refinamento: cabeçalho fixo translúcido não cobre âncoras; recursos viram três colunas com divisórias em md+ e empilham no celular; ficha inclinada 0,8° só em lg+."
+  },
+  "contentStates": {
+    "loading": {
+      "status": "not-applicable",
+      "reason": "Página estática pré-renderizada no build, sem busca de dados no cliente."
+    },
+    "empty": {
+      "status": "not-applicable",
+      "reason": "Conteúdo fixo; não há lista ou dado que possa vir vazio."
+    },
+    "error": {
+      "status": "not-applicable",
+      "reason": "A página não chama serviços; erros de rota usam o 404 padrão do Next."
+    },
+    "partial": {
+      "status": "not-applicable",
+      "reason": "Não depende de dados externos; a ficha é um exemplo fictício fixo."
+    },
+    "success": {
+      "status": "pass",
+      "evidence": "Página completa renderizada nos dois temas e nas duas larguras; capturas nesta pasta."
+    },
+    "permission": {
+      "status": "not-applicable",
+      "reason": "Site público, sem login nem áreas restritas."
+    }
+  },
+  "renderedEvidence": [
+    {
+      "viewport": "390x844",
+      "artifact": "apresentacao-390x844-claro.png",
+      "observation": "Página inteira no celular, tema claro: rubrica com traço, h1 com 'termina' em itálico petróleo, botão sólido com seta, ficha-recibo com sombra, filete duplo, faixa de princípios invertida."
+    },
+    {
+      "viewport": "390x844",
+      "artifact": "apresentacao-390x844-escuro.png",
+      "observation": "Página inteira no celular, tema escuro: acento petróleo claro, botão claro com texto escuro, faixa de princípios vira clara (inversão mantém contraste)."
+    },
+    {
+      "viewport": "1440x900",
+      "artifact": "apresentacao-1440x900-claro.png",
+      "observation": "Desktop claro: duas colunas, ficha levemente inclinada com sombra em camadas que respeita a borda serrilhada, numerais 01–03 em Fraunces itálico, colofão com filete duplo."
+    },
+    {
+      "viewport": "1440x900",
+      "artifact": "apresentacao-1440x900-escuro.png",
+      "observation": "Desktop escuro: mesma composição; sombras neutras pretas, faixa de princípios em papel claro com marcadores romanos."
+    }
+  ]
+}

@@ -1,26 +1,200 @@
 @import "tailwindcss";
 
+/* Tokens da direção "documento público" (docs/design/direcao-visual.md).
+   Paleta sem cores de leitura partidária; contraste AA verificado nos dois temas. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --papel: #f6f3ec;
+  --papel-2: #ece7dc;
+  --tinta: #17191c;
+  --tinta-2: #4a4f57;
+  --linha: #d6d0c3;
+  --petroleo: #0e5c63;
+  --petroleo-escuro: #0a464c;
+  --petroleo-tinta: #ffffff;
+  --marca-texto: #f2d58a;
+  --sombra-cor: 30 26 18;
+  --ease-saida: cubic-bezier(0.16, 1, 0.3, 1);
+  /* Cor do anel de foco; superfícies invertidas a redefinem para manter 3:1. */
+  --cor-foco: var(--petroleo);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --papel: #121416;
+    --papel-2: #1b1f22;
+    --tinta: #ece8df;
+    --tinta-2: #a9adb3;
+    --linha: #2d3337;
+    --petroleo: #5fb8bf;
+    --petroleo-escuro: #7cc9cf;
+    --petroleo-tinta: #0b1a1c;
+    --marca-texto: #6b5520;
+    --sombra-cor: 0 0 0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  --color-papel: var(--papel);
+  --color-papel-2: var(--papel-2);
+  --color-tinta: var(--tinta);
+  --color-tinta-2: var(--tinta-2);
+  --color-linha: var(--linha);
+  --color-petroleo: var(--petroleo);
+  --color-petroleo-escuro: var(--petroleo-escuro);
+  --color-petroleo-tinta: var(--petroleo-tinta);
+  --color-marca-texto: var(--marca-texto);
+  --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+/* Em @layer base para que os utilitários do Tailwind (camada utilities) possam sobrescrever. */
+@layer base {
+  html {
+    color-scheme: light dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: var(--font-sans);
+    font-feature-settings: "kern", "liga";
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-optical-sizing: auto;
+  }
+
+  p,
+  li,
+  figcaption {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 3px;
+  }
+
+  /* Destino do link "Pular para o conteúdo": recebe foco por programa, sem contorno em toda a página. */
+  main:focus {
+    outline: none;
+  }
+
+  /* O cabeçalho só é fixo a partir de md; ali, âncoras e foco por Tab não ficam escondidos atrás dele. */
+  @media (min-width: 48rem) {
+    html {
+      scroll-padding-top: 5rem;
+    }
+  }
+}
+
+/* Classes do sistema visual. No Tailwind v4 classes próprias são declaradas com @utility. */
+
+/* Filete duplo de jornal: linha grossa sobre linha fina. */
+@utility filete {
+  border-top: 3px double var(--tinta);
+}
+
+/* Rótulo editorial em versalete, com traço à esquerda. */
+@utility rubrica {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: currentColor;
+  }
+}
+
+@utility botao-primario {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  gap: 0.625rem;
+  border: 1px solid transparent; /* aparece como contorno no modo de alto contraste */
+  border-radius: 2px;
+  background: var(--petroleo);
+  padding-inline: 1.5rem;
+  font-weight: 600;
+  color: var(--petroleo-tinta);
+  box-shadow:
+    0 1px 0 rgb(var(--sombra-cor) / 0.08),
+    0 6px 16px -6px rgb(var(--sombra-cor) / 0.35);
+  transition-property: background-color, box-shadow, transform;
+  transition-duration: 160ms;
+  transition-timing-function: var(--ease-saida);
+
+  &:hover {
+    background: var(--petroleo-escuro);
+    box-shadow:
+      0 1px 0 rgb(var(--sombra-cor) / 0.08),
+      0 10px 22px -8px rgb(var(--sombra-cor) / 0.45);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Seta que avança quando o link pai recebe hover. */
+@utility seta {
+  transition: transform 200ms var(--ease-saida);
+
+  a:hover > &,
+  a:focus-visible > & {
+    transform: translateX(3px);
+  }
+}
+
+/* Link sublinhado que ganha peso no hover, sem deslocar o texto. */
+@utility link-editorial {
+  color: var(--petroleo);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: text-decoration-thickness 150ms ease-out;
+
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+
+/* Sombra em camadas para a ficha; drop-shadow respeita a borda serrilhada do recibo. */
+@utility sombra-papel {
+  filter: drop-shadow(0 1px 1px rgb(var(--sombra-cor) / 0.08)) drop-shadow(0 18px 28px rgb(var(--sombra-cor) / 0.16));
+}
+
+/* Borda serrilhada de comprovante na ficha de exemplo. */
+@utility recibo {
+  --dente: 16px;
+  mask:
+    radial-gradient(circle at 50% 100%, transparent calc(var(--dente) / 2), #000 calc(var(--dente) / 2 + 0.5px))
+      bottom / var(--dente) var(--dente) repeat-x,
+    linear-gradient(#000, #000) top / 100% calc(100% - var(--dente) + 1px) no-repeat;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
