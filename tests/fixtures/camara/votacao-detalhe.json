@@ -1,0 +1,663 @@
+{
+  "dados": {
+    "id": "2236186-60",
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2236186-60",
+    "data": "2026-10-14",
+    "dataHoraRegistro": "2026-10-14T20:56:14",
+    "siglaOrgao": "PLEN",
+    "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/180",
+    "idOrgao": 180,
+    "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/83057",
+    "idEvento": 83057,
+    "descricao": "Rejeitada a Subemenda Substitutiva ao Projeto de Lei Complementar nº 281, de 2019, adotada pelo relator da Comissão Especial. Sim: 252; Não: 176; Total: 428.",
+    "aprovacao": 0,
+    "descUltimaAberturaVotacao": "Votação em turno único.",
+    "dataHoraUltimaAberturaVotacao": "2026-10-14T20:23:27",
+    "ultimaApresentacaoProposicao": {
+      "dataHoraRegistro": "2026-10-14T20:22:22",
+      "descricao": "Parecer às Emendas de Plenário proferido pelo Relator Dep. Marcelo Queiroz (PSDB/RJ) pela:\r\n• Comissão Especial, que conclui pela adequação financeira e orçamentária, constitucionalidade, juridicidade e boa técnica legislativa de todas as Emendas de Plenário; e, no mérito, pela aprovação da Emenda nº 24, com a Subemenda Substitutiva adotada, e pela rejeição das demais Emendas de Plenário.",
+      "uriProposicaoCitada": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647737"
+    },
+    "efeitosRegistrados": [],
+    "objetosPossiveis": [
+      {
+        "id": 2647740,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647740",
+        "siglaTipo": "SSP",
+        "codTipo": 509,
+        "numero": 1,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-10-14T20:25"
+      },
+      {
+        "id": 2647736,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647736",
+        "siglaTipo": "RPD",
+        "codTipo": 1053,
+        "numero": 20,
+        "ano": 0,
+        "ementa": "Votação Nominal do Destaque para Votação em Separado - PLP 281/2019-Destaque para Votação em Separado - PLP 281/2019",
+        "dataApresentacao": "2026-10-14T20:03"
+      },
+      {
+        "id": 2647735,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647735",
+        "siglaTipo": "DTQ",
+        "codTipo": 846,
+        "numero": 6,
+        "ano": 0,
+        "ementa": "Destaque para Votação em Separado - PLP 281/2019",
+        "dataApresentacao": "2026-10-14T20:03"
+      },
+      {
+        "id": 2647734,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647734",
+        "siglaTipo": "SBT",
+        "codTipo": 255,
+        "numero": 1,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários",
+        "dataApresentacao": "2026-10-14T20:02"
+      },
+      {
+        "id": 2647732,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647732",
+        "siglaTipo": "RPD",
+        "codTipo": 890,
+        "numero": 19,
+        "ano": 0,
+        "ementa": "Requerimento para Retirada de Tramitação de RPD/DTQ - PLP 281/2019",
+        "dataApresentacao": "2026-10-14T19:57"
+      },
+      {
+        "id": 2647731,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647731",
+        "siglaTipo": "PRLE",
+        "codTipo": 1001,
+        "numero": 1,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-10-14T19:53"
+      },
+      {
+        "id": 2647723,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647723",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 26,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-10-14T19:25"
+      },
+      {
+        "id": 2647667,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647667",
+        "siglaTipo": "RPD",
+        "codTipo": 486,
+        "numero": 18,
+        "ano": 0,
+        "ementa": "Requerimento Procedimental Genérico - PLP 281/2019",
+        "dataApresentacao": "2026-10-14T17:30"
+      },
+      {
+        "id": 2647625,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647625",
+        "siglaTipo": "PRLP",
+        "codTipo": 891,
+        "numero": 3,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários",
+        "dataApresentacao": "2026-10-14T14:18"
+      },
+      {
+        "id": 2647737,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647737",
+        "siglaTipo": "PEP",
+        "codTipo": 442,
+        "numero": 1,
+        "ano": 0,
+        "ementa": "Parecer às Emendas de Plenário proferido pelo Relator Dep. Marcelo Queiroz (PSDB/RJ) pela: • Comissão Especial, que conclui pela adequação financeira e orçamentária, constitucionalidade, juridicidade e boa técnica legislativa de todas as Emendas de Plenário; e, no mérito, pela aprovação da Emenda nº 24, com a Subemenda Substitutiva adotada, e pela rejeição das demais Emendas de Plenário.",
+        "dataApresentacao": "2026-10-14T13:55"
+      },
+      {
+        "id": 2647733,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647733",
+        "siglaTipo": "PPP",
+        "codTipo": 192,
+        "numero": 1,
+        "ano": 0,
+        "ementa": "Parecer proferido em Plenário pelo Relator Dep. Marcelo Queiroz (PSDB/RJ) pela: • Comissão Especial, que conclui pela constitucionalidade, juridicidade e boa técnica legislativa do Projeto de Lei Complementar nº 281, de 2019, pela não implicação financeira ou orçamentária da matéria em aumento ou diminuição da receita e da despesa pública, não cabendo pronunciamento quanto à adequação financeira ou orçamentária do Projeto de Lei Complementar nº 281, de 2019; e, no mérito, por sua aprovação, na forma do Substitutivo adotado.",
+        "dataApresentacao": "2026-10-14T13:55"
+      },
+      {
+        "id": 2647607,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647607",
+        "siglaTipo": "RPD",
+        "codTipo": 1051,
+        "numero": 17,
+        "ano": 0,
+        "ementa": "Votação Nominal do Requerimento de Retirada de Pauta - PLP 281/2019-Requerimento de Retirada de Matéria da Pauta - PLP 281/2019",
+        "dataApresentacao": "2026-10-14T11:58"
+      },
+      {
+        "id": 2647606,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647606",
+        "siglaTipo": "RPD",
+        "codTipo": 328,
+        "numero": 16,
+        "ano": 0,
+        "ementa": "Requerimento de Retirada de Matéria da Pauta - PLP 281/2019",
+        "dataApresentacao": "2026-10-14T11:58"
+      },
+      {
+        "id": 2647591,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647591",
+        "siglaTipo": "RPD",
+        "codTipo": 1051,
+        "numero": 15,
+        "ano": 0,
+        "ementa": "Votação Nominal do Requerimento de Retirada de Pauta - PLP 281/2019-Requerimento de Retirada de Matéria da Pauta - PLP 281/2019",
+        "dataApresentacao": "2026-10-14T10:59"
+      },
+      {
+        "id": 2647590,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647590",
+        "siglaTipo": "RPD",
+        "codTipo": 328,
+        "numero": 14,
+        "ano": 0,
+        "ementa": "Requerimento de Retirada de Matéria da Pauta - PLP 281/2019",
+        "dataApresentacao": "2026-10-14T10:59"
+      },
+      {
+        "id": 2610431,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2610431",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 25,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-18T17:32"
+      },
+      {
+        "id": 2610378,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2610378",
+        "siglaTipo": "RPD",
+        "codTipo": 328,
+        "numero": 13,
+        "ano": 0,
+        "ementa": "Requerimento de Retirada de Matéria da Pauta - PLP 281/2019",
+        "dataApresentacao": "2026-03-18T17:00"
+      },
+      {
+        "id": 2610149,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2610149",
+        "siglaTipo": "RPD",
+        "codTipo": 1051,
+        "numero": 12,
+        "ano": 0,
+        "ementa": "Votação Nominal do Requerimento de Retirada de Pauta - PLP 281/2019-Requerimento de Retirada de Matéria da Pauta - PLP 281/2019",
+        "dataApresentacao": "2026-03-18T11:50"
+      },
+      {
+        "id": 2610148,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2610148",
+        "siglaTipo": "RPD",
+        "codTipo": 1051,
+        "numero": 11,
+        "ano": 0,
+        "ementa": "Votação Nominal do Requerimento de Retirada de Pauta - PLP 281/2019-Requerimento de Retirada de Matéria da Pauta - PLP 281/2019",
+        "dataApresentacao": "2026-03-18T11:41"
+      },
+      {
+        "id": 2610147,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2610147",
+        "siglaTipo": "RPD",
+        "codTipo": 328,
+        "numero": 10,
+        "ano": 0,
+        "ementa": "Requerimento de Retirada de Matéria da Pauta - PLP 281/2019",
+        "dataApresentacao": "2026-03-18T11:41"
+      },
+      {
+        "id": 2609869,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609869",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 24,
+        "ano": 0,
+        "ementa": "Emenda ao PLP n. 281/2019, que dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-17T21:41"
+      },
+      {
+        "id": 2609815,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609815",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 23,
+        "ano": 0,
+        "ementa": "Acrescenta-se, onde couber, o seguinte artigo:\n\nArt. X. A Lei nº 9.650, de 27 de maio de 1998, passa a vigorar acrescida do seguinte artigo:\n\n\n“Art. ___. Fica instituído o Bônus de Eficiência e Produtividade no âmbito do Banco Central do Brasil, devido aos ocupantes dos cargos de Auditor do Banco Central do Brasil e de Técnico do Banco Central do Brasil, integrantes da Carreira de Especialista, vinculado ao cumprimento de metas institucionais estabelecidas.",
+        "dataApresentacao": "2026-03-17T20:10"
+      },
+      {
+        "id": 2609793,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609793",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 22,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-17T19:41"
+      },
+      {
+        "id": 2609791,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609791",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 21,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-17T19:39"
+      },
+      {
+        "id": 2609679,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609679",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 20,
+        "ano": 0,
+        "ementa": "Emenda com o objetivo de assegurar transparência, controle institucional e acompanhamento parlamentar das medidas de resolução e supervisão do sistema financeiro nacional.",
+        "dataApresentacao": "2026-03-17T18:05"
+      },
+      {
+        "id": 2609662,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609662",
+        "siglaTipo": "DTQ",
+        "codTipo": 1011,
+        "numero": 5,
+        "ano": 0,
+        "ementa": "Destaque de Emenda - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T17:46"
+      },
+      {
+        "id": 2609585,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609585",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 19,
+        "ano": 0,
+        "ementa": "Emenda modificativa art. 106.",
+        "dataApresentacao": "2026-03-17T17:21"
+      },
+      {
+        "id": 2609583,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609583",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 18,
+        "ano": 0,
+        "ementa": "Emenda modificativa art. 47.",
+        "dataApresentacao": "2026-03-17T17:21"
+      },
+      {
+        "id": 2609582,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609582",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 17,
+        "ano": 0,
+        "ementa": "Emenda modificativa art. 46.",
+        "dataApresentacao": "2026-03-17T17:21"
+      },
+      {
+        "id": 2609581,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609581",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 16,
+        "ano": 0,
+        "ementa": "Emenda modificativa art. 8º.",
+        "dataApresentacao": "2026-03-17T17:21"
+      },
+      {
+        "id": 2609580,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609580",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 15,
+        "ano": 0,
+        "ementa": "Emenda modificativa art. 45",
+        "dataApresentacao": "2026-03-17T17:21"
+      },
+      {
+        "id": 2609555,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609555",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 14,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-17T17:10"
+      },
+      {
+        "id": 2609554,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609554",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 13,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-17T17:10"
+      },
+      {
+        "id": 2609460,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609460",
+        "siglaTipo": "DTQ",
+        "codTipo": 846,
+        "numero": 4,
+        "ano": 0,
+        "ementa": "Destaque para Votação em Separado - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T15:36"
+      },
+      {
+        "id": 2609305,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609305",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 12,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-17T13:54"
+      },
+      {
+        "id": 2609304,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609304",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 11,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-17T13:51"
+      },
+      {
+        "id": 2609272,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609272",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 10,
+        "ano": 0,
+        "ementa": "Emenda ao PLP 281/2019, que Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-17T12:54"
+      },
+      {
+        "id": 2609256,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609256",
+        "siglaTipo": "RPD",
+        "codTipo": 1053,
+        "numero": 9,
+        "ano": 0,
+        "ementa": "Votação Nominal do Destaque para Votação em Separado - PLP 281/2019-Destaque para Votação em Separado - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:41"
+      },
+      {
+        "id": 2609255,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609255",
+        "siglaTipo": "DTQ",
+        "codTipo": 846,
+        "numero": 3,
+        "ano": 0,
+        "ementa": "Destaque para Votação em Separado - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:41"
+      },
+      {
+        "id": 2609254,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609254",
+        "siglaTipo": "RPD",
+        "codTipo": 1053,
+        "numero": 8,
+        "ano": 0,
+        "ementa": "Votação Nominal do Destaque para Votação em Separado - PLP 281/2019-Destaque para Votação em Separado - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:41"
+      },
+      {
+        "id": 2609253,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609253",
+        "siglaTipo": "DTQ",
+        "codTipo": 846,
+        "numero": 2,
+        "ano": 0,
+        "ementa": "Destaque para Votação em Separado - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:41"
+      },
+      {
+        "id": 2609252,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609252",
+        "siglaTipo": "RPD",
+        "codTipo": 1053,
+        "numero": 7,
+        "ano": 0,
+        "ementa": "Votação Nominal do Destaque para Votação em Separado - PLP 281/2019-Destaque para Votação em Separado - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:41"
+      },
+      {
+        "id": 2609251,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609251",
+        "siglaTipo": "DTQ",
+        "codTipo": 846,
+        "numero": 1,
+        "ano": 0,
+        "ementa": "Destaque para Votação em Separado - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:41"
+      },
+      {
+        "id": 2609238,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609238",
+        "siglaTipo": "RPD",
+        "codTipo": 1043,
+        "numero": 6,
+        "ano": 0,
+        "ementa": "Votação Nominal do Requerimento de Adiamento da Votação Matéria Urgente - PLP 281/2019-Requerimento de Adiamento da Votação Matéria Urgente - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:12"
+      },
+      {
+        "id": 2609236,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609236",
+        "siglaTipo": "RPD",
+        "codTipo": 1041,
+        "numero": 5,
+        "ano": 0,
+        "ementa": "Votação Nominal do Requerimento de Adiamento da Discussão Matéria Urgente - PLP 281/2019-Requerimento de Adiamento da Discussão Matéria Urgente - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:12"
+      },
+      {
+        "id": 2609235,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609235",
+        "siglaTipo": "RPD",
+        "codTipo": 1051,
+        "numero": 4,
+        "ano": 0,
+        "ementa": "Votação Nominal do Requerimento de Retirada de Pauta - PLP 281/2019-Requerimento de Retirada de Matéria da Pauta - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:12"
+      },
+      {
+        "id": 2609234,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609234",
+        "siglaTipo": "RPD",
+        "codTipo": 467,
+        "numero": 3,
+        "ano": 0,
+        "ementa": "Requerimento de Adiamento da Votação Matéria Urgente - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:12"
+      },
+      {
+        "id": 2609233,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609233",
+        "siglaTipo": "RPD",
+        "codTipo": 892,
+        "numero": 2,
+        "ano": 0,
+        "ementa": "Requerimento de Adiamento da Discussão Matéria Urgente - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:12"
+      },
+      {
+        "id": 2609231,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609231",
+        "siglaTipo": "RPD",
+        "codTipo": 328,
+        "numero": 1,
+        "ano": 0,
+        "ementa": "Requerimento de Retirada de Matéria da Pauta - PLP 281/2019",
+        "dataApresentacao": "2026-03-17T12:12"
+      },
+      {
+        "id": 2609216,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609216",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 9,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários",
+        "dataApresentacao": "2026-03-17T11:52"
+      },
+      {
+        "id": 2609189,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609189",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 8,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-17T11:11"
+      },
+      {
+        "id": 2609187,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2609187",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 7,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-17T11:11"
+      },
+      {
+        "id": 2606847,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606847",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 6,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-04T15:11"
+      },
+      {
+        "id": 2606319,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606319",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 5,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-03T18:08"
+      },
+      {
+        "id": 2606307,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606307",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 4,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-03T17:49"
+      },
+      {
+        "id": 2606288,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606288",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 3,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-03T17:15"
+      },
+      {
+        "id": 2606287,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2606287",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 2,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-03-03T17:15"
+      },
+      {
+        "id": 2605969,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2605969",
+        "siglaTipo": "EMP",
+        "codTipo": 870,
+        "numero": 1,
+        "ano": 0,
+        "ementa": "“Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.”",
+        "dataApresentacao": "2026-03-03T12:40"
+      },
+      {
+        "id": 2603667,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2603667",
+        "siglaTipo": "PRLP",
+        "codTipo": 891,
+        "numero": 1,
+        "ano": 0,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2026-02-20T17:28"
+      },
+      {
+        "id": 2362449,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2362449",
+        "siglaTipo": "REQ",
+        "codTipo": 392,
+        "numero": 1555,
+        "ano": 2023,
+        "ementa": "Requer, nos termos do artigo 155 do Regimento Interno, tramitação sob o regime urgência do Projeto de Lei Complementar nº 281, de 2019.",
+        "dataApresentacao": "2023-05-16T15:35"
+      },
+      {
+        "id": 2255079,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2255079",
+        "siglaTipo": "REQ",
+        "codTipo": 147,
+        "numero": 1537,
+        "ano": 2020,
+        "ementa": "RELATORIA DO PLP 281, DE 2019 que trata sobre os regimes de resolução das Instituições autorizadas a funcionar pelo Banco Central do Brasil, pela superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2020-06-10T17:05"
+      },
+      {
+        "id": 2238759,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2238759",
+        "siglaTipo": "REQ",
+        "codTipo": 521,
+        "numero": 411,
+        "ano": 2020,
+        "ementa": "Requer a criação de Comissão Especial destinada a proferir parecer ao Projeto de Lei Complementar nº 281/2019 - Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2020-03-11T12:36"
+      }
+    ],
+    "proposicoesAfetadas": [
+      {
+        "id": 2236186,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2236186",
+        "siglaTipo": "PLP",
+        "codTipo": 140,
+        "numero": 281,
+        "ano": 2019,
+        "ementa": "Dispõe sobre os regimes de resolução das instituições autorizadas a funcionar pelo Banco Central do Brasil, pela Superintendência de Seguros Privados e pela Comissão de Valores Mobiliários.",
+        "dataApresentacao": "2019-12-23T17:10"
+      }
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2236186-60"
+    }
+  ]
+}

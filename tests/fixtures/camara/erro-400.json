@@ -1,0 +1,7 @@
+{
+  "status": 400,
+  "title": "Requisição inválida",
+  "detail": "Parâmetro(s) inválido(s).",
+  "instance": "siglaOrgao",
+  "code": 5
+}

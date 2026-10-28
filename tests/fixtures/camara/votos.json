@@ -1,0 +1,55 @@
+{
+  "dados": [
+    {
+      "tipoVoto": "Sim",
+      "dataRegistroVoto": "2026-10-14T20:52:43",
+      "deputado_": {
+        "id": 220588,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/220588",
+        "nome": "Roberto Duarte",
+        "siglaPartido": "REPUBLICANOS",
+        "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37908",
+        "siglaUf": "AC",
+        "idLegislatura": 57,
+        "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/220588.jpg",
+        "email": "dep.robertoduarte@camara.leg.br"
+      }
+    },
+    {
+      "tipoVoto": "Sim",
+      "dataRegistroVoto": "2026-10-14T20:52:35",
+      "deputado_": {
+        "id": 160527,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160527",
+        "nome": "Aguinaldo Ribeiro",
+        "siglaPartido": "PP",
+        "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/37903",
+        "siglaUf": "PB",
+        "idLegislatura": 57,
+        "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/160527.jpg",
+        "email": "dep.aguinaldoribeiro@camara.leg.br"
+      }
+    },
+    {
+      "tipoVoto": "Não",
+      "dataRegistroVoto": "2026-10-14T20:51:49",
+      "deputado_": {
+        "id": 74161,
+        "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/74161",
+        "nome": "Reginaldo Lopes",
+        "siglaPartido": "PT",
+        "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36844",
+        "siglaUf": "MG",
+        "idLegislatura": 57,
+        "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/74161.jpg",
+        "email": "dep.reginaldolopes@camara.leg.br"
+      }
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2236186-60/votos"
+    }
+  ]
+}

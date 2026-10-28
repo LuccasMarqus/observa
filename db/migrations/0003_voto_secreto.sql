@@ -1,0 +1,1 @@
+ALTER TABLE "voto" ALTER COLUMN "tipo_voto" DROP NOT NULL;

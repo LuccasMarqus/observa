@@ -1,0 +1,17 @@
+# Postgres local para desenvolvimento e testes de integração.
+# Credenciais apenas locais; nunca use estas em produção.
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: observa
+      POSTGRES_PASSWORD: observa
+      POSTGRES_DB: observa
+    ports:
+      # Só a própria máquina acessa; não expõe na rede local.
+      - "127.0.0.1:54329:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U observa"]
+      interval: 2s
+      timeout: 3s
+      retries: 15

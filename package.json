@@ -1,0 +1,57 @@
+{
+  "name": "observa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run --project unit",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test:integration": "vitest run --project integration",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "sync:deputados": "tsx --env-file-if-exists=.env.local jobs/sync-deputados.ts",
+    "sync:votacoes": "tsx --env-file-if-exists=.env.local jobs/sync-votacoes.ts",
+    "sync:despesas": "tsx --env-file-if-exists=.env.local jobs/sync-despesas.ts",
+    "sync:proposicoes": "tsx --env-file-if-exists=.env.local jobs/sync-proposicoes.ts",
+    "sync:diario": "tsx --env-file-if-exists=.env.local jobs/sync-diario.ts"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.3",
+    "drizzle-orm": "^0.45.4",
+    "fflate": "^0.8.3",
+    "next": "16.4.3",
+    "postgres": "^3.4.9",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@tailwindcss/turbopack": "^4",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.1.2",
+    "@vitest/coverage-v8": "^5.0.5",
+    "csv-stringify": "^6.9.0",
+    "drizzle-kit": "^0.31.11",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "jsdom": "^29.1.1",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

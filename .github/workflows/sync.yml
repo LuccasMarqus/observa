@@ -1,0 +1,79 @@
+name: Sincronização de dados
+
+# Atualiza o banco de produção (Supabase) com os dados oficiais da Câmara.
+# Requer o segredo DATABASE_URL (Session pooler do Supabase, com ?sslmode=require).
+# Execução falha (vermelha) quando algum job termina em falha ou falha parcial: o GitHub avisa por e-mail.
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # 06:00 em Brasília
+  workflow_dispatch:
+    inputs:
+      votacoes_inicio:
+        description: "Carga histórica: votações a partir de (AAAA-MM-DD). Deixe vazio para só a rotina diária."
+        required: false
+        default: ""
+      votacoes_fim:
+        description: "Carga histórica: votações até (AAAA-MM-DD)."
+        required: false
+        default: ""
+      anos_despesas:
+        description: "Carga histórica: anos de despesas separados por espaço (ex.: 2023 2024 2025)."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+# Nunca duas sincronizações ao mesmo tempo; a segunda espera a primeira terminar.
+concurrency:
+  group: sincronizacao
+  cancel-in-progress: false
+
+jobs:
+  sincronizar:
+    name: Sincronizar com a Câmara
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      LEGISLATURA: ${{ vars.LEGISLATURA || '57' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+
+      - name: Conferir configuração
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::error::Configure o segredo DATABASE_URL em Settings > Secrets and variables > Actions"
+            exit 1
+          fi
+
+      - name: Rotina diária (deputados, votações de 30 dias, despesas do ano, proposições)
+        run: npx tsx jobs/sync-diario.ts "$LEGISLATURA"
+
+      - name: Carga histórica de votações
+        if: ${{ !cancelled() && inputs.votacoes_inicio != '' }}
+        env:
+          INICIO: ${{ inputs.votacoes_inicio }}
+          FIM: ${{ inputs.votacoes_fim }}
+        run: npx tsx jobs/sync-votacoes.ts "$INICIO" "$FIM"
+
+      - name: Carga histórica de despesas
+        if: ${{ !cancelled() && inputs.anos_despesas != '' }}
+        env:
+          ANOS: ${{ inputs.anos_despesas }}
+        run: |
+          status=0
+          for ano in $ANOS; do
+            if ! [[ "$ano" =~ ^[0-9]{4}$ ]]; then
+              echo "::error::Ano inválido: $ano"
+              exit 1
+            fi
+            npx tsx jobs/sync-despesas.ts "$ano" || status=1
+          done
+          exit $status

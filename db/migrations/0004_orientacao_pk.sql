@@ -1,0 +1,2 @@
+ALTER TABLE "orientacao" DROP CONSTRAINT "orientacao_votacao_id_sigla_bancada_pk";--> statement-breakpoint
+ALTER TABLE "orientacao" ADD CONSTRAINT "orientacao_votacao_id_tipo_lideranca_sigla_bancada_pk" PRIMARY KEY("votacao_id","tipo_lideranca","sigla_bancada");

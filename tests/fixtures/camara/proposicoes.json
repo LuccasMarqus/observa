@@ -1,0 +1,42 @@
+{
+  "dados": [
+    {
+      "id": 2199117,
+      "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2199117",
+      "siglaTipo": "PL",
+      "codTipo": 139,
+      "numero": 2485,
+      "ano": 2019,
+      "ementa": "Altera a Lei nº 9.656, de 3 de junho de 1998, que dispõe sobre os planos e seguros privados de assistência à saúde, para vedar a suspensão ou rescisão unilateral de contratos nas hipóteses que menciona.",
+      "dataApresentacao": "2019-04-24T11:30"
+    },
+    {
+      "id": 2199624,
+      "uri": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2199624",
+      "siglaTipo": "EMC",
+      "codTipo": 130,
+      "numero": 1,
+      "ano": 2019,
+      "ementa": "Modifica o sistema de previdência social, estabelece regras de transição e disposições transitórias, e dá outras providências.",
+      "dataApresentacao": "2019-04-29T11:28"
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=204379&itens=2"
+    },
+    {
+      "rel": "next",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=204379&pagina=2&itens=2"
+    },
+    {
+      "rel": "first",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=204379&pagina=1&itens=2"
+    },
+    {
+      "rel": "last",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=204379&pagina=318&itens=2"
+    }
+  ]
+}

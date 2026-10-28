@@ -1,0 +1,324 @@
+{
+  "id": "532c8d7c-e63f-4960-a227-0e5a2f0e2b3d",
+  "prevId": "3b78659c-34cd-476a-8c83-aa285d5a962c",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.deputado": {
+      "name": "deputado",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "nome_civil": {
+          "name": "nome_civil",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nome_eleitoral": {
+          "name": "nome_eleitoral",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sexo": {
+          "name": "sexo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "data_nascimento": {
+          "name": "data_nascimento",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uf_nascimento": {
+          "name": "uf_nascimento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "municipio_nascimento": {
+          "name": "municipio_nascimento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "escolaridade": {
+          "name": "escolaridade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "url_foto": {
+          "name": "url_foto",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "atualizado_em": {
+          "name": "atualizado_em",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.ingestao_execucao": {
+      "name": "ingestao_execucao",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "job": {
+          "name": "job",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "iniciado_em": {
+          "name": "iniciado_em",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "finalizado_em": {
+          "name": "finalizado_em",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "registros_lidos": {
+          "name": "registros_lidos",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "registros_gravados": {
+          "name": "registros_gravados",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "erro": {
+          "name": "erro",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "ingestao_execucao_job_idx": {
+          "name": "ingestao_execucao_job_idx",
+          "columns": [
+            {
+              "expression": "job",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "iniciado_em",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "ingestao_execucao_status_valido": {
+          "name": "ingestao_execucao_status_valido",
+          "value": "\"ingestao_execucao\".\"status\" in ('rodando', 'sucesso', 'falha_parcial', 'falha')"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.legislatura": {
+      "name": "legislatura",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "data_inicio": {
+          "name": "data_inicio",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "data_fim": {
+          "name": "data_fim",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "legislatura_periodo_valido": {
+          "name": "legislatura_periodo_valido",
+          "value": "\"legislatura\".\"data_fim\" > \"legislatura\".\"data_inicio\""
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.mandato": {
+      "name": "mandato",
+      "schema": "",
+      "columns": {
+        "deputado_id": {
+          "name": "deputado_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "legislatura_id": {
+          "name": "legislatura_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sigla_partido": {
+          "name": "sigla_partido",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sigla_uf": {
+          "name": "sigla_uf",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "situacao": {
+          "name": "situacao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "condicao_eleitoral": {
+          "name": "condicao_eleitoral",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "mandato_legislatura_uf_idx": {
+          "name": "mandato_legislatura_uf_idx",
+          "columns": [
+            {
+              "expression": "legislatura_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "sigla_uf",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "mandato_deputado_id_deputado_id_fk": {
+          "name": "mandato_deputado_id_deputado_id_fk",
+          "tableFrom": "mandato",
+          "tableTo": "deputado",
+          "columnsFrom": [
+            "deputado_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "mandato_legislatura_id_legislatura_id_fk": {
+          "name": "mandato_legislatura_id_legislatura_id_fk",
+          "tableFrom": "mandato",
+          "tableTo": "legislatura",
+          "columnsFrom": [
+            "legislatura_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "mandato_deputado_id_legislatura_id_pk": {
+          "name": "mandato_deputado_id_legislatura_id_pk",
+          "columns": [
+            "deputado_id",
+            "legislatura_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
