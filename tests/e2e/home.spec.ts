@@ -90,9 +90,13 @@ test.describe("página de apresentação", () => {
       const resultado = await page.evaluate(() => {
         const ativo = document.activeElement as HTMLElement;
         const cabecalho = document.querySelector("header")!;
-        // Elementos fixos (o link de pular) ficam por cima do cabeçalho, não atrás dele.
+        // Ignora: elementos fixos (o link de pular fica por cima do cabeçalho) e destinos de foco
+        // programático com tabIndex -1 (o <main> inteiro), que não fazem parte da ordem de Tab.
         const ignorar =
-          cabecalho.contains(ativo) || getComputedStyle(ativo).position === "fixed" || getComputedStyle(cabecalho).position !== "sticky";
+          cabecalho.contains(ativo) ||
+          ativo.tabIndex < 0 ||
+          getComputedStyle(ativo).position === "fixed" ||
+          getComputedStyle(cabecalho).position !== "sticky";
         if (ignorar) return null;
         const coberto = ativo.getBoundingClientRect().top < cabecalho.getBoundingClientRect().bottom;
         return coberto ? (ativo.textContent ?? "").trim() : null;

@@ -5,6 +5,7 @@ Site para cidadãos brasileiros acompanharem o que seus representantes fazem com
 - Produto: [PRODUCT-BRIEF.md](PRODUCT-BRIEF.md)
 - Plano técnico do MVP "Meu Deputado": [docs/capabilities/meu-deputado.md](docs/capabilities/meu-deputado.md)
 - Evidências de TDD: [docs/tdd/](docs/tdd/)
+- **Estado atual e próximos passos (passagem de contexto):** [docs/HANDOFF.md](docs/HANDOFF.md)
 
 ## Requisitos
 
